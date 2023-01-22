@@ -4,7 +4,9 @@ This project demo concept Publisher and Subscriber the use of ibm mq product
 
 ### Docker Setup
 1. `$ docker pull ibmcom/mq:latest`
-2. `$ docker run --env LICENSE=accept --env MQ_QMGR_NAME=QM1 --volume qm1data:/mnt/mqm --publish 1419:1414 --publish 9445:9443 --name=ibm-mq  --network mq-demo-network --network-alias qmgr --detach --env MQ_APP_PASSWORD=passw0rd ibmcom/mq:latest`
+2. `$ docker volume create qm1data`
+3. `$ docker network create mq-demo-network`
+4. `$ docker run --env LICENSE=accept --env MQ_QMGR_NAME=QM1 --volume qm1data:/mnt/mqm --publish 1419:1414 --publish 9445:9443 --name=ibm-mq  --network mq-demo-network --network-alias qmgr --detach --env MQ_APP_PASSWORD=passw0rd ibmcom/mq:latest`
 
 ### Setup Project
     ```
