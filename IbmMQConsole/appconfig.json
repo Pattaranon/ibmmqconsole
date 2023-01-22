@@ -1,6 +1,6 @@
 {
   "IbmMQ": {
-    "Host": "192.168.1.108",
+    "Host": "192.168.1.102",
     "User": "app",
     "Password": "passw0rd",
     "Port": 1419,
