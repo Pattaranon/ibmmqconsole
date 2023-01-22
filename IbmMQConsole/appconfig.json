@@ -1,0 +1,12 @@
+{
+  "IbmMQ": {
+    "Host": "192.168.1.108",
+    "User": "app",
+    "Password": "passw0rd",
+    "Port": 1419,
+    "ManagerName": "QM1",
+    "QueueName": "DEV.QUEUE.1",
+    "Channel": "DEV.APP.SVRCONN",
+    "TopicName": "dev/"
+  }
+}

@@ -1,0 +1,20 @@
+version: "9.2.4"
+services:
+  mq:
+    image: ibmcom/mq:latest
+    platform: linux/x86_64
+    container_name: ibm-mq
+    environment:
+      - LICENSE=accept
+      - MQ_QMGR_NAME=MLOANQM
+    volumes:
+      - "mqmdata:/mnt/mqm"
+    networks:
+      - pubsub
+    ports:
+      - "9445:9443"
+      - "1419:1414"
+volumes:
+  mqmdata:
+networks:
+  pubsub:
